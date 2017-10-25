@@ -49,8 +49,8 @@ class AztecPostViewController: UIViewController, PostEditor {
 
         textView.outputProcessor =
             PipelineProcessor([VideoShortcodeProcessor.videoPressPostProcessor,
-                               VideoShortcodeProcessor.wordPressVideoPostProcessor]) //,
-//                               CalypsoProcessorOut()])
+                               VideoShortcodeProcessor.wordPressVideoPostProcessor,
+                               CalypsoProcessorOut()])
 
         let accessibilityLabel = NSLocalizedString("Rich Content", comment: "Post Rich content")
         self.configureDefaultProperties(for: textView, accessibilityLabel: accessibilityLabel)
