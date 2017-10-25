@@ -40,6 +40,9 @@ class CalypsoProcessorOut: Processor {
 
         var output = text
 
+        output = output.replacingMatches(of: "<p>(?:<br ?\\/?>|\\u00a0|\\uFEFF| )*<\\/p>", with: "<p>&nbsp;</p>")
+
+
 
 
 
